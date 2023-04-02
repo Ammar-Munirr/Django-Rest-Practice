@@ -10,4 +10,3 @@ def student(request):
     serializer = StudentSerializer(items,many= True)
     return JsonResponse(serializer.data,safe=False)
     
-    
