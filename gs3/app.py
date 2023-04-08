@@ -22,4 +22,17 @@ def update():
     r = requests.put(url=url,data=json_data)
     print(r.json())
     
-update()
+# update()
+
+
+def post():
+    data = {
+        'name': 'Rehman',
+        'age':34
+    }
+    
+    json_data = json.dumps(data)
+    r = requests.post(url=url,data=json_data)
+    
+    
+# post()

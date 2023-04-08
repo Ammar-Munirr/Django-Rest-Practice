@@ -31,3 +31,11 @@ def stuget(request):
         serialize = StudentSerializer(item,data=python_data,partial = True)
         if serialize.is_valid():
             serialize.save()
+    if request.method == 'POST':
+        data = request.body
+        stream = io.BytesIO(data)
+        python_data = JSONParser().parse(stream)
+        serialize = StudentSerializer(data=python_data)
+        if serialize.is_valid():
+            serialize.save()
+            
