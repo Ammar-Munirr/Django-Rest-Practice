@@ -7,3 +7,11 @@ class StudentSerializer(serializers.Serializer):
     
     
     
+    def update(self,instance,validated):
+        instance.name = validated.get('name',instance.name)
+        instance.age = validated.get('age',instance.age)
+        instance.save()
+        return instance
+    
+    
+    

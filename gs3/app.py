@@ -11,4 +11,15 @@ def get(id = None):
     print(r.json())
     
     
-get(1)
+# get(1)
+
+def update():
+    data = {
+        'id':3,
+        'age':34
+    }
+    json_data = json.dumps(data)
+    r = requests.put(url=url,data=json_data)
+    print(r.json())
+    
+update()
