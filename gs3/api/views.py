@@ -39,3 +39,4 @@ def stuget(request):
         if serialize.is_valid():
             serialize.save()
             
+#this is comment
